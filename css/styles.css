@@ -1,0 +1,146 @@
+@import url(https://fonts.googleapis.com/css?family=Fraunces:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:  hsl(30, 38%, 92%);
+}
+
+.container{
+    display: flex;
+    width: 40rem;
+    height: 30rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.grid{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img{
+   width: 100%;
+   display: flex;
+}
+
+.desktop{
+    width: 100%;
+    object-fit: cover;
+}
+
+.mobile{
+    display: none;
+}
+
+.card-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1.5rem 2.75rem;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 2.2rem;
+    font-family: 'Fraunces' , sans-serif;
+}
+
+.card-content h1{
+    color: hsl(212, 21%, 14%);
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.5;
+}
+
+.p{
+    font-weight: 700;
+    letter-spacing: .5rem;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+}
+
+.price h1{
+    color: hsl(158, 36%, 37%);
+}
+
+.p2{
+    position: relative;
+    left: .5rem;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+    border-radius: 1rem;
+    padding: 1rem 3rem;
+    position: relative;
+    top: 1rem;
+    transition: 0.3s ease;
+    background-color: hsl(158, 36%, 37%);
+    color: #fff;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: hsl(159, 32%, 25%);
+}
+
+@media(max-width:640px){
+
+    .container{
+        height: 45rem;
+        margin: 2rem 1rem;
+    }
+
+    .grid{
+        height: 100%;
+        box-sizing: border-box;
+        grid-template-columns: 1fr;
+    }
+
+    .img{
+        height: 80%;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        height: 100%;
+        display: unset;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-content{
+        position: relative;
+        top: -2.5rem;
+        height: 100%;
+        padding: 2rem 3rem;
+        word-spacing: .2rem;
+        box-sizing: border-box;
+    }
+}
